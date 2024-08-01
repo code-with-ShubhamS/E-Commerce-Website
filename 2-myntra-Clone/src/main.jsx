@@ -8,6 +8,9 @@ import Home from "./Main/Home.jsx";
 import {Provider} from "react-redux"
 import store from "./store/index.js";
 import SubmitOrder from "./components/SubmitOrder.jsx";
+import ContactPage from "./components/ContactPage.jsx";
+import Offers from "./components/Offers.jsx";
+import AboutUs from "./components/AboutUs.jsx";
 
 const router = createBrowserRouter([
   {
@@ -15,7 +18,10 @@ const router = createBrowserRouter([
     element: <App />,
     children:[
       {path:"/",element:<Home/>},
-      {path:"/Bag",element:<Bag/>}
+      {path:"/Bag",element:<Bag/>},
+      {path:"/contact",element:<ContactPage/>},
+      {path:"/offer",element:<Offers/>},
+      {path:"/aboutUs",element:<AboutUs/>}
     ]
   },
   {

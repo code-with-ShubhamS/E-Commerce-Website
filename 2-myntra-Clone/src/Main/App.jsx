@@ -9,11 +9,12 @@ import { useSelector } from 'react-redux'
 import LoadingSpiner from '../components/LoadingSpiner'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+
 function App() {
    const fetch= useSelector(store=>store.fetchStatus)
   return (
     <>
-    <Header/>
+    <Header></Header>
     <Fetching></Fetching>
      {fetch.currentlyFetching?<LoadingSpiner/>:<Outlet/>}
     <Footer/>

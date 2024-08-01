@@ -5,9 +5,9 @@ import { itemsAction } from "../store/Items";
 
 const Fetching = () => {
   const fetchStatus = useSelector((store) => store.fetchStatus);
-  console.log(fetchStatus);
+
   const dispatch = useDispatch();
-  console.log(fetchStatus);
+
   
   useEffect(() => {
       if (fetchStatus.fetchDone) return;
@@ -24,9 +24,7 @@ const Fetching = () => {
         dispatch(fetchStatusAction.markFetchDone());
       });
 
-      return () => {
-        controller.abort();
-      };
+      
 
   }, [fetchStatus]);
 
